@@ -1,0 +1,467 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.active {
+  display: block !important;
+}
+
+#slajder-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Postavljamo visinu na 100% visine ekrana */
+    overflow: hidden;
+}
+
+.slajder-slika img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ovo osigurava da se slika pravilno razvuče kako bi pokrila celu površinu */
+}
+
+.slajder-slika {
+    display: none;
+    width: 100%;
+    height: 100vh; /* Postavljamo visinu na 100% visine ekrana */
+}
+
+.slajder-sadrzaj {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+    max-width: 80%;
+}
+
+.slajder-sadrzaj h1 {
+    margin-bottom:5%;
+}
+
+
+.slajder-sadrzaj p {
+	
+    font-size: 1em; /* Prilagodite veličinu fonta za <p> tag */
+    max-width: 500px; /* Postavljamo maksimalnu širinu za <p> tag */
+    margin: 30px auto; /* Centriramo <p> tag unutar .slajder-sadrzaj */
+}
+
+.slajder-sadrzaj a{
+	background-color: #4f33f1;
+    border: 1px solid #4f33f1;
+    color: #fff;
+	padding:10px;
+	border-radius: 10px;
+	text-decoration: none;
+}
+
+.slajder-sadrzaj a:hover {
+	background-color: #fff;
+	color: #4f33f1;
+	 border: 1px solid #fff;
+}
+
+	
+
+@media (max-width: 600px) {
+    .slajder-sadrzaj {
+        max-width: 90%;
+    }
+
+    .slajder-sadrzaj h1  {
+        font-size: 2em; /* Prilagodite veličinu fonta za manje ekrane */
+    }
+	
+	.slajder-sadrzaj p  {
+        font-size: 1em; /* Prilagodite veličinu fonta za manje ekrane */
+    }
+}
+
+.sdivs {
+     background-color: #1b1f20;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: #fff;
+    padding-bottom: 40px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 50px;
+}
+
+.sdivs:hover {
+  background-color: #4c087b;
+  margin-top: 30px;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+}
+
+section {
+	text-align: center;
+	margin-top: 5%;
+}
+section h3 {
+  text-transform: uppercase;
+  color: #4c087b;
+  font-size: 16px;
+}
+
+section h2 {
+
+  text-transform: uppercase;
+  font-size: 32px;
+  color: #343434;
+  font-weight: bold;
+}
+
+.aditional-info {
+    display: none;
+}
+
+.school p {
+  text-align: center;  color: #818181;
+}
+
+ .school-inner {
+  background-image: url("../img/school.jpg");
+  margin-top: 40px;
+}
+
+.school-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  padding: 50px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.conference-date span {
+	background-color: #4f33f1;
+    border: 1px solid #4f33f1;
+    color: #fff;
+	padding:3px;
+	
+}
+
+.countdown {
+	display: inline-block;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 42px;
+  border: 1px solid #fff;
+  margin-bottom: 15px;
+}
+
+.school-overlay a{
+	background-color: #4f33f1;
+    border: 1px solid #4f33f1;
+    color: #fff;
+	padding:10px;
+	border-radius: 10px;
+	text-decoration: none;
+}
+
+.Join {
+display: none;
+}
+.Join .overlay-bg {
+background-color: rgba(0, 0, 0, 0.5);
+position: fixed;
+top: 0px;
+left: 0px;
+width: 100vw;
+height: 100%;
+z-index: 998;
+}
+.Join .joinBlock {
+	
+background-image: url("../img/about.jpg");
+background-position: center; 
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 50%;
+height: auto;
+z-index: 999;
+padding: 40px;
+color: #fff;
+}
+.Join .joinBlock #closeModal {
+position: absolute;
+right: 20px;
+top: 10px;
+font-weight: 500;
+cursor: pointer;
+color: #fff;
+}
+.Join .joinBlock form .inpBlokJoin {
+padding-bottom: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.Join .joinBlock form .inpBlokJoin label {
+display: block;
+text-align: center;
+margin-bottom: 10px;
+}
+.Join .joinBlock form .inpBlokJoin input[type=text] {
+
+width: 35%;
+border-radius: 10px;
+margin-bottom: 10px;
+
+}
+.Join .joinBlock form .inpBlokJoin .errorJoin {
+color: #ff0505;
+}
+
+.Join .joinBlock form .inpBlokJoin .joinbtn {
+width: auto;
+margin-top: 20px;
+}
+.Join .joinBlock .scsJoin {
+text-align: center;
+font-weight: 800;
+color: #fff;
+padding: 10px;
+font-size: 15px;
+background-color: #03ff57;
+margin-bottom: 5px;
+}
+.errorInput {
+border: 2px solid #ff0505;
+}
+
+.sub {
+	background-color: #fff;
+    border: 1px solid #4f33f1;
+    color: #4f33f1;
+	padding:10px 30px;
+	border-radius: 10px;
+	text-decoration: none;
+}
+/**background-color: #1c2021;
+	color:white;
+	text-align: center;
+	padding: 15px;
+	border: 1px solid #ddd;*/
+.slajder-glavni {
+  position: relative;
+  overflow: hidden;
+}
+
+.slajder-pod {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slajd {
+  flex: 0 0 50%; /* Svaki slajd će zauzimati 50% širine slajdera */
+  box-sizing: border-box;
+    
+}
+
+.pricing-plan {
+	background-color: #1c2021;
+	color:white;
+	text-align: center;
+	padding: 15px;
+	border: 1px solid #ddd;
+}
+
+.strelica {
+  top: 50%;
+  font-size: 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+.pricing-plan a {
+	color:white;
+	display: inline-block;
+
+}
+
+ .pricing-plan ul {
+  list-style: none;
+  padding-left: 0;
+  
+}
+
+ .pricing-plan ul li {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid white;
+}
+
+
+ .pricing-plan .price .main-num {
+  font-size: 45px;
+  font-style: italic;
+}
+
+.pricing-plan .price .sec-num {
+  position: relative;
+  top: -30px;
+}
+
+ .pricing-plan .price .month {
+  position: relative;
+  left: -25px;
+}
+
+.strelica {
+  font-size: 20px;
+  background-color: #4c087b; 
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+
+.strelica:hover {
+  background-color: #fff;
+	color: #4c087b; 
+}
+
+.pricing-plan a{
+	background-color: #4c087b;
+    border: 1px solid #4c087b;
+    color: #fff;
+	padding:6px;
+	border-radius: 10px;
+	text-decoration: none;
+}
+
+.pricing-plan a:hover{
+	background-color: #fff;
+    color: #4c087b;
+}
+
+
+
+.customer-say  .testimonial {
+  background-size: cover;
+  background-position: center;
+  height: 360px;
+  color: #fff;
+}
+
+.customer-say .testimonial .testimonial-inner {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  padding: 25px;
+  position: relative;
+}
+
+.customer-say .testimonial .testimonial-inner .testimonial-content {
+  position: absolute;
+  bottom: 25px;
+}
+
+.customer-say
+  .testimonial
+  .testimonial-inner
+  .testimonial-content:before {
+  content: "";
+  /* display: block; */
+  width: 3px;
+  height: 50px;
+  background: #fff;
+  position: absolute;
+  left: -9px;
+  top: 6px;
+}
+
+.center-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.pursch{
+	background-color: #4c087b;
+    border: 1px solid #4c087b;
+    color: #fff;
+	padding:10px 20px;
+	border-radius: 10px;
+	text-decoration: none;
+}
+
+
+ #scrollToTopBtn {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    display: none;
+    background-color:#4c087b;/* Boja pozadine dugmeta */
+    color: #fff; /* Boja teksta */
+	border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+#scrollToTopBtn i {
+     font-size: 20px;
+}
+
+#socialIcons li a {
+    color: #fff;  /* Bela boja za ikonice */
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+/* Stilizacija za footer linkove */
+#footerLinks li a {
+    color: #fff;  /* Bela boja za tekst linkova */
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 16px;
+}
+
+/* Stilizacija za responsivnost */
+@media (max-width: 768px) {
+    #socialIcons li a,
+    #footerLinks li a {
+        display: block;  /* Postavljanje linkova da budu blok elementi na manjim ekranima */
+        margin: 10px 5px;   /* Povećavanje margine za bolju čitljivost */
+    }
+}

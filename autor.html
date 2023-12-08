@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	  <link rel="stylesheet" href="css/style.css" type="text/css">
+	  <script
+      src="https://kit.fontawesome.com/eadb065d31.js"
+      crossorigin="anonymous"
+    ></script>
+	</head>
+	<body>
+		<header class="navbar navbar-expand-md  navbar-dark bg-dark">
+			<a id="custom-logo" class="navbar-brand" href="index.html">
+				<img src="img/logo.png" alt="Logo" id="slika">
+			</a>
+			<button class="navbar-toggler" id="custom-toggle-btn">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="navbar-nav ml-auto">
+			  <!-- dinamciki nav bar -->
+				</ul>
+			</div>
+		</header>
+		<main>
+        <div class="row text-center justify-content-center mx-0">
+            <div class="col-6 col-md-4 col-xl-3 mt-3 text-secondary">
+                 <img src="img/ja.jpg" alt="Autor" class="mb-3 img-fluid"/>
+                <h2>Dunja Lalic</h2>
+                <p>Indeks: 224/22</p>
+            </div>
+        </div>
+      </main>
+		<footer class="bg-dark text-white py-4">
+		<div class="container">
+			<div class="text-center mb-3">
+				<a id="custom-logo" class="navbar-brand" href="index.html">
+				<img src="img/logo.png" alt="Logo" id="slika">
+			</a>
+			</div>
+			<div class="row justify-content-center mb-3 flex-md-row flex-wrap">
+				<div class="col-md-6">
+					<ul class="nav justify-content-center" id="socialIcons"></ul>
+				</div>
+				<div class="col-md-6 mt-md-0 mt-3">
+					<ul class="nav justify-content-center" id="footerLinks"></ul>
+				</div>
+			</div>
+		</div>
+		<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		const navbar = document.getElementById("navbar");
+		const toggleBtn = document.getElementById("custom-toggle-btn");
+
+		const navItems = [
+		{ text: "Home", url: "index.html" },
+		{ text: "Services", url: "index.html#services" },
+		{ text: "School", url: "index.html#school" },
+		{ text: "Offer", url: "index.html#offer" },
+		{ text: "Author", url: "autor.html" },
+		];
+
+		navItems.forEach((item) => {
+		const navItem = document.createElement("li");
+		navItem.classList.add("nav-item");
+		const navLink = document.createElement("a");
+		navLink.classList.add("nav-link");
+		navLink.href = item.url;
+		navLink.textContent = item.text;
+		navItem.appendChild(navLink);
+		navbar.querySelector(".navbar-nav").appendChild(navItem);
+		});
+
+		toggleBtn.addEventListener("click", function () {
+		navbar.classList.toggle("active");
+		});
+	});
+	document.addEventListener("DOMContentLoaded", function() {
+    var socialIcons = [
+        { icon: 'facebook', link: 'https://sr-rs.facebook.com/' },
+        { icon: 'instagram', link: 'https://www.instagram.com/lalicdunja/' },
+        { icon: 'file', link: '#' },
+        { icon: 'sitemap', link: '#' },
+        { icon: 'r', link: '#' }
+    ];
+
+    var socialIconsContainer = document.getElementById('socialIcons');
+    socialIcons.forEach(function(iconData) {
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        var icon = document.createElement('i');
+
+        // Ispravka klasa za Facebook i Instagram ikonice
+        if (iconData.icon === 'facebook' || iconData.icon === 'instagram') {
+            icon.classList.add('fab', 'fa-' + iconData.icon);
+        } else {
+            icon.classList.add('fa-solid', 'fa-' + iconData.icon);
+        }
+
+        a.href = iconData.link;
+        a.appendChild(icon);
+        li.appendChild(a);
+        socialIconsContainer.appendChild(li);
+    });
+
+    var footerLinks = [
+        { text: 'Home', link: 'index.html' },
+        { text: 'Services', link: 'index.html#services' },
+        { text: 'School', link: 'index.html#school' },
+        { text: 'Offer', link: 'index.html#offer' },
+        { text: 'Author', link: 'autor.html' }
+    ];
+
+    var footerLinksContainer = document.getElementById('footerLinks');
+    footerLinks.forEach(function(linkData) {
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = linkData.link;
+        a.textContent = linkData.text;
+        li.appendChild(a);
+        footerLinksContainer.appendChild(li);
+    });
+	});
+		</script>
+	</footer>
+	</body>
+</html>
