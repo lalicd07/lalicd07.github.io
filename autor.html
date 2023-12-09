@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"/>
 	<head>
-	  <meta charset="UTF-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	  <link rel="stylesheet" href="css/style.css" type="text/css">
+	  <meta charset="UTF-8"/>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  <meta name="author" content="Dunja Lalić"/>
+	   <meta name="description" content="Welcome to the cybersecurity site created by expert Dunja Lalić. Learn more about cybersecurity, IT security, and valuable online protection resources." />
+	  <meta name="language" content="english"/>
+	  <title>Author</title>
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+	  <link rel="stylesheet" href="css/style.css" type="text/css" />
 	  <script
       src="https://kit.fontawesome.com/eadb065d31.js"
       crossorigin="anonymous"
@@ -49,6 +53,7 @@
 				</div>
 			</div>
 		</div>
+		</footer>
 		<script>
 		document.addEventListener("DOMContentLoaded", function () {
 		const navbar = document.getElementById("navbar");
@@ -82,8 +87,8 @@
         { icon: 'facebook', link: 'https://sr-rs.facebook.com/' },
         { icon: 'instagram', link: 'https://www.instagram.com/lalicdunja/' },
         { icon: 'file', link: '#' },
-        { icon: 'sitemap', link: '#' },
-        { icon: 'r', link: '#' }
+        { icon: 'sitemap', link: 'sitemap.xml' },
+        { icon: 'r', link: 'robots.txt' }
     ];
 
     var socialIconsContainer = document.getElementById('socialIcons');
@@ -92,7 +97,6 @@
         var a = document.createElement('a');
         var icon = document.createElement('i');
 
-        // Ispravka klasa za Facebook i Instagram ikonice
         if (iconData.icon === 'facebook' || iconData.icon === 'instagram') {
             icon.classList.add('fab', 'fa-' + iconData.icon);
         } else {
@@ -123,7 +127,7 @@
         footerLinksContainer.appendChild(li);
     });
 	});
+		
 		</script>
-	</footer>
 	</body>
 </html>

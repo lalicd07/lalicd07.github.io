@@ -56,7 +56,6 @@ $(document).ready(function(){
 });
 
 
-// Servis
 const objservi = [
     {
         h3: "Internet payments",
@@ -206,9 +205,6 @@ $("#successfulJoin").html("You have successfully submitted your application");
 });
 });
 
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const slajder = document.querySelector(".slajder-pod");
   const strelicaLevo = document.querySelector(".left");
@@ -247,8 +243,6 @@ document.addEventListener("DOMContentLoaded", function () {
     slajder.style.transform = "translateX(" + novaTransformacija + ")";
   }
 });
-
-
 
 var objName, objLastName, objAddress, objCity, objPhone, objEmail, objOrderDdl, arrOrder, arrTerms;
 
@@ -367,8 +361,8 @@ function regexValidation(re, obj) {
 
 
 function createDdl() {
-    let optionsText= ["Free","39e","200e"];
-    let optionsValues= ["0","1","2"];
+    let optionsText= ["Choose a package","Basic package","Advanced package","Premium package","Special offer"];
+    let optionsValues= ["0","1","2","3","4"];
 
     objOrderDdl= document.createElement("select");
     objOrderDdl.setAttribute("id","order-method");
@@ -409,8 +403,6 @@ function checkDdl(){
     }
 }
 
-
-
 function handleScroll() {
     var scrollToTopBtn = document.getElementById("scrollToTopBtn");
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -420,25 +412,22 @@ function handleScroll() {
     }
 }
 
-
 function scrollToTop() {
     document.body.scrollTop = 0; 
     document.documentElement.scrollTop = 0; 
 }
 
-
 window.onscroll = function() {
     handleScroll();
 };
-
 
 document.addEventListener("DOMContentLoaded", function() {
     var socialIcons = [
         { icon: 'facebook', link: 'https://sr-rs.facebook.com/' },
         { icon: 'instagram', link: 'https://www.instagram.com/lalicdunja/' },
-        { icon: 'file', link: '#' },
-        { icon: 'sitemap', link: '#' },
-        { icon: 'r', link: '#' }
+        { icon: 'file', link: 'DokumentacijaSajt.pdf' },
+        { icon: 'sitemap', link: 'sitemap.xml' },
+        { icon: 'r', link: 'robots.txt' }
     ];
 
     var socialIconsContainer = document.getElementById('socialIcons');
@@ -447,7 +436,6 @@ document.addEventListener("DOMContentLoaded", function() {
         var a = document.createElement('a');
         var icon = document.createElement('i');
 
-        // Ispravka klasa za Facebook i Instagram ikonice
         if (iconData.icon === 'facebook' || iconData.icon === 'instagram') {
             icon.classList.add('fab', 'fa-' + iconData.icon);
         } else {

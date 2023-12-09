@@ -10,20 +10,20 @@ body {
 #slajder-container {
     position: relative;
     width: 100%;
-    height: 100vh; /* Postavljamo visinu na 100% visine ekrana */
+    height: 100vh; 
     overflow: hidden;
 }
 
 .slajder-slika img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ovo osigurava da se slika pravilno razvuče kako bi pokrila celu površinu */
+    object-fit: cover; 
 }
 
 .slajder-slika {
     display: none;
     width: 100%;
-    height: 100vh; /* Postavljamo visinu na 100% visine ekrana */
+    height: 100vh;
 }
 
 .slajder-sadrzaj {
@@ -42,11 +42,10 @@ body {
 }
 
 
-.slajder-sadrzaj p {
-	
-    font-size: 1em; /* Prilagodite veličinu fonta za <p> tag */
-    max-width: 500px; /* Postavljamo maksimalnu širinu za <p> tag */
-    margin: 30px auto; /* Centriramo <p> tag unutar .slajder-sadrzaj */
+.slajder-sadrzaj p {	
+    font-size: 1em; 
+    max-width: 500px;
+    margin: 30px auto; 
 }
 
 .slajder-sadrzaj a{
@@ -72,11 +71,11 @@ body {
     }
 
     .slajder-sadrzaj h1  {
-        font-size: 2em; /* Prilagodite veličinu fonta za manje ekrane */
+        font-size: 2em; 
     }
 	
 	.slajder-sadrzaj p  {
-        font-size: 1em; /* Prilagodite veličinu fonta za manje ekrane */
+        font-size: 1em; 
     }
 }
 
@@ -148,7 +147,6 @@ section h2 {
     border: 1px solid #4f33f1;
     color: #fff;
 	padding:3px;
-	
 }
 
 .countdown {
@@ -243,7 +241,7 @@ margin-bottom: 5px;
 border: 2px solid #ff0505;
 }
 
-.sub {
+#sub {
 	background-color: #fff;
     border: 1px solid #4f33f1;
     color: #4f33f1;
@@ -251,11 +249,7 @@ border: 2px solid #ff0505;
 	border-radius: 10px;
 	text-decoration: none;
 }
-/**background-color: #1c2021;
-	color:white;
-	text-align: center;
-	padding: 15px;
-	border: 1px solid #ddd;*/
+
 .slajder-glavni {
   position: relative;
   overflow: hidden;
@@ -267,7 +261,7 @@ border: 2px solid #ff0505;
 }
 
 .slajd {
-  flex: 0 0 50%; /* Svaki slajd će zauzimati 50% širine slajdera */
+  flex: 0 0 50%; 
   box-sizing: border-box;
     
 }
@@ -385,12 +379,8 @@ border: 2px solid #ff0505;
   bottom: 25px;
 }
 
-.customer-say
-  .testimonial
-  .testimonial-inner
-  .testimonial-content:before {
+.customer-say .testimonial .testimonial-inner .testimonial-content:before {
   content: "";
-  /* display: block; */
   width: 3px;
   height: 50px;
   background: #fff;
@@ -425,14 +415,13 @@ border: 2px solid #ff0505;
 	text-decoration: none;
 }
 
-
  #scrollToTopBtn {
     position: fixed;
     bottom: 50px;
     right: 20px;
     display: none;
-    background-color:#4c087b;/* Boja pozadine dugmeta */
-    color: #fff; /* Boja teksta */
+    background-color:#4c087b;
+    color: #fff; 
 	border-radius: 10px;
     padding: 5px 10px;
     cursor: pointer;
@@ -444,24 +433,22 @@ border: 2px solid #ff0505;
 }
 
 #socialIcons li a {
-    color: #fff;  /* Bela boja za ikonice */
+    color: #fff; 
     margin: 0 10px;
     font-size: 24px;
 }
 
-/* Stilizacija za footer linkove */
 #footerLinks li a {
-    color: #fff;  /* Bela boja za tekst linkova */
+    color: #fff; 
     text-decoration: none;
     margin: 0 20px;
     font-size: 16px;
 }
 
-/* Stilizacija za responsivnost */
 @media (max-width: 768px) {
     #socialIcons li a,
     #footerLinks li a {
-        display: block;  /* Postavljanje linkova da budu blok elementi na manjim ekranima */
-        margin: 10px 5px;   /* Povećavanje margine za bolju čitljivost */
+        display: block;  
+        margin: 10px 5px;   
     }
 }
